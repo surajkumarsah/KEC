@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "24034101660",
+    "firebase_url": "https://keck-9bb17.firebaseio.com",
+    "project_id": "keck-9bb17",
+    "storage_bucket": "keck-9bb17.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24034101660:android:1d8c59306b92ea59",
+        "android_client_info": {
+          "package_name": "com.example.KEC"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24034101660-20sg269227bh23qefionejolj08h3569.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.KEC",
+            "certificate_hash": "f02a7c214515ffaa9566d48c8ec5702578d300f2"
+          }
+        },
+        {
+          "client_id": "24034101660-mt4js2k5sppc4vq05pdslkcidekv98lp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJjIETWWhtY61YyyGIREfMFvFJKcRydf8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24034101660-mt4js2k5sppc4vq05pdslkcidekv98lp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
