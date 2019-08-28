@@ -17,6 +17,7 @@ public class Semester_Civil_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_semester__civil_);
 
         Semester1 = (ImageView) findViewById(R.id.sem1);
+        Semester2 = (ImageView) findViewById(R.id.sem2);
         Semester3 = (ImageView) findViewById(R.id.sem3);
         Semester4 = (ImageView) findViewById(R.id.sem4);
         Semester5 = (ImageView) findViewById(R.id.sem1);
@@ -28,18 +29,18 @@ public class Semester_Civil_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(Semester_Civil_Activity.this,Syllabus_Sem1_Activity.class);
+                Intent intent = new Intent(Semester_Civil_Activity.this,Syll_Sem1_Civil_Activity.class);
                 startActivity(intent);
             }
         });
 
-        Semester2 = (ImageView) findViewById(R.id.sem2);
+
 
         Semester2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(Semester_Civil_Activity.this,Syll_Sem2_Activity.class);
+                Intent intent = new Intent(Semester_Civil_Activity.this,Syll_Sem2_Civil_Activity.class);
                 startActivity(intent);
             }
         });
@@ -48,7 +49,7 @@ public class Semester_Civil_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(Semester_Civil_Activity.this,Syll_Sem3_Activity.class);
+                Intent intent = new Intent(Semester_Civil_Activity.this,Syll_Sem3_Civil_Activity.class);
                 startActivity(intent);
             }
         });
@@ -57,7 +58,7 @@ public class Semester_Civil_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(Semester_Civil_Activity.this,Syll_Sem4_Activity.class);
+                Intent intent = new Intent(Semester_Civil_Activity.this,Syll_Sem4_Civil_Activity.class);
                 startActivity(intent);
             }
         });
@@ -66,7 +67,7 @@ public class Semester_Civil_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(Semester_Civil_Activity.this,Syll_Sem5_Activity.class);
+                Intent intent = new Intent(Semester_Civil_Activity.this,Syll_Sem5_Civil_Activity.class);
                 startActivity(intent);
             }
         });
@@ -75,7 +76,7 @@ public class Semester_Civil_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(Semester_Civil_Activity.this,Syll_Sem6_Activity.class);
+                Intent intent = new Intent(Semester_Civil_Activity.this,Syll_Sem6_Civil_Activity.class);
                 startActivity(intent);
             }
         });
@@ -84,7 +85,7 @@ public class Semester_Civil_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(Semester_Civil_Activity.this,Syll_Sem7_Activity.class);
+                Intent intent = new Intent(Semester_Civil_Activity.this,Syll_Sem7_Civil_Activity.class);
                 startActivity(intent);
             }
         });
@@ -93,7 +94,7 @@ public class Semester_Civil_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(Semester_Civil_Activity.this,Syll_Sem7_Activity.class);
+                Intent intent = new Intent(Semester_Civil_Activity.this,Syll_Sem8_Civil_Activity.class);
                 startActivity(intent);
             }
         });
