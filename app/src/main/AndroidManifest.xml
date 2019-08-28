@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Syllabus_Sem1_Activity"></activity>
+        <activity android:name=".Syll_Sem8_Activity"></activity>
+        <activity android:name=".Syll_Sem7_Activity" />
+        <activity android:name=".Syll_Sem6_Activity" />
+        <activity android:name=".Syll_Sem5_Activity" />
+        <activity android:name=".Syll_Sem4_Activity" />
+        <activity android:name=".Syll_Sem3_Activity" />
+        <activity android:name=".Syll_Sem2_Activity" />
+        <activity android:name=".Syllabus_Sem1_Activity" />
         <activity android:name=".Semester_Activity" />
         <activity android:name=".Add_Stud_Activity" />
         <activity android:name=".Admin_Activity" />

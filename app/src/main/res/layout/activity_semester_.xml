@@ -36,7 +36,7 @@
         android:layout_below="@+id/sem2"
         android:layout_marginRight="190dp"
 
-        android:src="@drawable/sem3"
+        android:src="@drawable/sem2"
         />
 
     <ImageView
