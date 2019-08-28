@@ -1,15 +1,30 @@
 package com.example.KEC;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.KEC.Model.Users;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Login_Activity extends AppCompatActivity {
 
     private Button LoginButton;
+    private EditText LoginID;
+    private EditText Password;
+    private String parentDbAdmin = "Admins";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,13 +32,72 @@ public class Login_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_login_);
 
         LoginButton = (Button) findViewById(R.id.login_btn);
+        LoginID = (EditText) findViewById(R.id.login_id);
+        Password = (EditText) findViewById(R.id.password);
 
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Login_Activity.this,User_Activity.class);
-                startActivity(intent);
+
+                LoginUser();
             }
         });
     }
+
+    private void LoginUser()
+    {
+        String login_id = LoginID.getText().toString();
+        String password = Password.getText().toString();
+
+        if(TextUtils.isEmpty(login_id))
+        {
+            Toast.makeText(Login_Activity.this,"Please, Enter login ID.",Toast.LENGTH_SHORT).show();
+        }
+        else if(TextUtils.isEmpty(password))
+        {
+            Toast.makeText(Login_Activity.this,"Please, Enter Password.",Toast.LENGTH_SHORT).show();
+        }
+        else
+            {
+            AllowAccessToAccount(login_id,password);
+        }
+
+    }
+
+    private void AllowAccessToAccount(final String login_id,final String password)
+    {
+        //DB connectivity...
+        final DatabaseReference RootRef;
+        RootRef = FirebaseDatabase.getInstance().getReference();
+
+        RootRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot)
+            {
+                if(dataSnapshot.child(parentDbAdmin).child(login_id).exists())
+                {
+                    Users userData = dataSnapshot.child(parentDbAdmin).child(login_id).getValue(Users.class);
+
+                    if(userData.getPhone().equals(login_id))
+                    {
+                        if(userData.getPassword().equals(password))
+                        {
+                            Toast.makeText(Login_Activity.this,"You logged in Successfully.",Toast.LENGTH_SHORT).show();
+
+                            Intent intent = new Intent(Login_Activity.this,Profile_Activity.class);
+                            startActivity(intent);
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+
+
 }

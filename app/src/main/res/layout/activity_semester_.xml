@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Semester_Activity">
+
+    <ImageView
+        android:id="@+id/sem1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="190dp"
+        android:layout_marginTop="60dp"
+
+        android:src="@drawable/sem1"
+        />
+
+    <ImageView
+        android:id="@+id/sem2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/sem2"
+        android:layout_below="@+id/sem1"
+        android:layout_marginLeft="180dp"
+        android:layout_marginRight="100dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/sem3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_below="@+id/sem2"
+        android:layout_marginRight="190dp"
+
+        android:src="@drawable/sem3"
+        />
+
+    <ImageView
+        android:id="@+id/sem4"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/sem4"
+        android:layout_below="@+id/sem3"
+        android:layout_marginLeft="180dp"
+        android:layout_marginRight="100dp"
+        />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/sem5"
+        android:layout_below="@+id/sem4"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="190dp"
+
+        />
+
+
+
+</RelativeLayout>

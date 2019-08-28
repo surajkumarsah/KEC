@@ -6,4 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".Profile_Activity">
 
+    <Button
+        android:id="@+id/addstud"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:text="Add Student"
+        />
+    <Button
+        android:id="@+id/sem_btn"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_above="@+id/add_stud"
+        android:text="Semester"
+        />
+
 </RelativeLayout>
