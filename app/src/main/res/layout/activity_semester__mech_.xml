@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -88,7 +87,7 @@
         android:id="@+id/sem8"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:src="@drawable/sem5"
+        android:src="@drawable/sem4"
         android:layout_below="@+id/sem7"
         android:layout_marginLeft="100dp"
         android:layout_marginRight="190dp"
