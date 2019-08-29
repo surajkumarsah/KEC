@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Add_Admin_Activity"></activity>
+        <activity
+            android:name=".Profile_Activity"
+            android:label="@string/title_activity_profile_"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Add_Admin_Activity" />
         <activity android:name=".Add_Admin" />
         <activity android:name=".Upload_Notice_Activity" />
         <activity android:name=".Semester_Mech_Activity" />
@@ -33,7 +37,6 @@
         <activity android:name=".Semester_Activity" />
         <activity android:name=".Add_Stud_Activity" />
         <activity android:name=".Admin_Activity" />
-        <activity android:name=".Profile_Activity" />
         <activity android:name=".User_Activity" />
         <activity android:name=".Login_Activity" />
         <activity android:name=".Home_Activity" />

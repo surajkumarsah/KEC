@@ -13,6 +13,7 @@ public class Home_Activity extends AppCompatActivity {
     private ImageView studentLogin;
     private ImageView adminLogin;
     private ImageView facultyLogin;
+    private Button SemBtn,AdminPage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -54,6 +55,25 @@ public class Home_Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        SemBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(Home_Activity.this,Semester_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        AdminPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(Home_Activity.this,Admin_Activity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }

@@ -4,18 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Admin_Activity">
+    tools:context=".Profile_Activity">
 
     <Button
-        android:id="@+id/add_students"
+        android:id="@+id/addstud"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="80dp"
-        android:background="@drawable/input_design"
-        android:text="Add Students"
-        android:textSize="30sp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_height="60dp"
+        android:text="Add Student"
+        android:background="@drawable/button_design"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        />
+    <Button
+        android:id="@+id/sem_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@+id/add_stud"
+        android:text="Semester"
+        android:background="@drawable/button_design"
+        android:layout_below="@+id/addstud"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+    <Button
+        android:id="@+id/add_admin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Add Admin"
+        android:background="@drawable/button_design"
+        android:layout_below="@+id/sem_btn"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        />
+    <Button
+        android:id="@+id/upload_notice"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@+id/add_stud"
+        android:text="Upload Notice"
+        android:background="@drawable/button_design"
+        android:layout_below="@+id/add_admin"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
         />
 
 </RelativeLayout>

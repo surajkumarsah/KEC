@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.KEC.Model.Admins;
+import com.example.KEC.Model.Faculties;
 import com.example.KEC.Model.Users;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,7 +26,8 @@ public class Login_Activity extends AppCompatActivity {
     private Button LoginButton;
     private EditText LoginID;
     private EditText Password;
-    private String parentDbAdmin = "Admins";
+    private TextView AdminLink, FacultyLink, NotAdminPanel;
+    private String parentDbName = "Users";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,9 @@ public class Login_Activity extends AppCompatActivity {
         LoginButton = (Button) findViewById(R.id.login_btn);
         LoginID = (EditText) findViewById(R.id.login_id);
         Password = (EditText) findViewById(R.id.password);
+        AdminLink = (TextView) findViewById(R.id.admin_panel_link);
+        FacultyLink = (TextView) findViewById(R.id.faculty_panel_link);
+        NotAdminPanel = (TextView) findViewById(R.id.not_admin_panel_link);
 
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +48,50 @@ public class Login_Activity extends AppCompatActivity {
                 LoginUser();
             }
         });
+
+        AdminLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                   LoginButton.setText("Admin Login");
+                   NotAdminPanel.setVisibility(View.VISIBLE);
+                   FacultyLink.setVisibility(View.INVISIBLE);
+                   AdminLink.setVisibility(View.INVISIBLE);
+                   parentDbName = "Admins";
+
+            }
+        });
+
+        FacultyLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                LoginButton.setText("Faculty Login");
+                NotAdminPanel.setVisibility(View.VISIBLE);
+                FacultyLink.setVisibility(View.INVISIBLE);
+                AdminLink.setVisibility(View.INVISIBLE);
+                parentDbName = "Faculties";
+            }
+        });
+
+        NotAdminPanel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                LoginButton.setText("Login");
+                NotAdminPanel.setVisibility(View.VISIBLE);
+                FacultyLink.setVisibility(View.VISIBLE);
+                AdminLink.setVisibility(View.VISIBLE);
+                parentDbName = "Users";
+
+            }
+        });
+
+
+
+
+
+
     }
 
     private void LoginUser()
@@ -74,21 +124,57 @@ public class Login_Activity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
             {
-                if(dataSnapshot.child(parentDbAdmin).child(login_id).exists())
+                if(dataSnapshot.child(parentDbName).child(login_id).exists())
                 {
-                    Users userData = dataSnapshot.child(parentDbAdmin).child(login_id).getValue(Users.class);
+                    Users userData = dataSnapshot.child(parentDbName).child(login_id).getValue(Users.class);
+                    Admins adminData = dataSnapshot.child(parentDbName).child(login_id).getValue(Admins.class);
+                    Faculties facultyData = dataSnapshot.child(parentDbName).child(login_id).getValue(Faculties.class);
 
                     if(userData.getPhone().equals(login_id))
                     {
                         if(userData.getPassword().equals(password))
                         {
-                            Toast.makeText(Login_Activity.this,"You logged in Successfully.",Toast.LENGTH_SHORT).show();
+                            if(parentDbName.equals("Users"))
+                            {
+                                Toast.makeText(Login_Activity.this,"User logged in Successfully.",Toast.LENGTH_SHORT).show();
 
-                            Intent intent = new Intent(Login_Activity.this,Profile_Activity.class);
-                            startActivity(intent);
+                                Intent intent = new Intent(Login_Activity.this,Profile_Activity.class);
+                                startActivity(intent);
+                            }
+                            else if(parentDbName.equals("Admins"))
+                            {
+                                Toast.makeText(Login_Activity.this,"Admin logged in Successfully.",Toast.LENGTH_SHORT).show();
+
+                                Intent intent = new Intent(Login_Activity.this,Profile_Activity.class);
+                                startActivity(intent);
+                            }
+                            else if(parentDbName.equals("Faculties"))
+                            {
+                                Toast.makeText(Login_Activity.this,"Faculties logged in Successfully.",Toast.LENGTH_SHORT).show();
+
+                                Intent intent = new Intent(Login_Activity.this,Profile_Activity.class);
+                                startActivity(intent);
+                            }
+                            else
+                            {
+                                Toast.makeText(Login_Activity.this,"Error in Logged in",Toast.LENGTH_SHORT).show();
+
+                                Intent intent = new Intent(Login_Activity.this,Login_Activity.class);
+                                startActivity(intent);
+                            }
+
                         }
                     }
                 }
+
+                else
+                {
+                    Toast.makeText(Login_Activity.this,"Account with this "+login_id+" is not Exist.",Toast.LENGTH_SHORT).show();
+
+                    Toast.makeText(Login_Activity.this,"You have to create a new Account.,",Toast.LENGTH_SHORT).show();
+
+                }
+
             }
 
             @Override
