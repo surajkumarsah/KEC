@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Semester_Mech_Activity"></activity>
+        <activity android:name=".Add_Admin_Activity"></activity>
+        <activity android:name=".Add_Admin" />
+        <activity android:name=".Upload_Notice_Activity" />
+        <activity android:name=".Semester_Mech_Activity" />
         <activity android:name=".Semester_Civil_Activity" />
         <activity android:name=".Syll_Sem8_Mech_Activity" />
         <activity android:name=".Syll_Sem7_Mech_Activity" />

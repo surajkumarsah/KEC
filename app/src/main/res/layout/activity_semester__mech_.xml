@@ -5,95 +5,87 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Semester_Activity">
-
     <ImageView
         android:id="@+id/sem1"
-        android:layout_width="match_parent"
+        android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="190dp"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="60dp"
-
         android:src="@drawable/sem1"
         />
 
     <ImageView
         android:id="@+id/sem2"
-        android:layout_width="match_parent"
+        android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/sem2"
-        android:layout_below="@+id/sem1"
-        android:layout_marginLeft="180dp"
-        android:layout_marginRight="100dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="250dp"
         />
 
 
     <ImageView
         android:id="@+id/sem3"
-        android:layout_width="match_parent"
+        android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_below="@+id/sem2"
-        android:layout_marginRight="190dp"
-
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/sem1"
         android:src="@drawable/sem2"
         />
 
     <ImageView
         android:id="@+id/sem4"
-        android:layout_width="match_parent"
+        android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/sem4"
-        android:layout_below="@+id/sem3"
-        android:layout_marginLeft="180dp"
-        android:layout_marginRight="100dp"
+        android:layout_below="@+id/sem2"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="20dp"
         />
 
 
     <ImageView
         android:id="@+id/sem5"
-        android:layout_width="match_parent"
+        android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/sem5"
         android:layout_below="@+id/sem4"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="190dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
 
         />
 
     <ImageView
         android:id="@+id/sem6"
-        android:layout_width="match_parent"
+        android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_below="@+id/sem5"
-        android:layout_marginRight="190dp"
-
+        android:layout_marginLeft="250dp"
+        android:layout_below="@+id/sem4"
+        android:layout_marginTop="20dp"
         android:src="@drawable/sem2"
         />
 
     <ImageView
         android:id="@+id/sem7"
-        android:layout_width="match_parent"
+        android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/sem4"
         android:layout_below="@+id/sem6"
-        android:layout_marginLeft="180dp"
-        android:layout_marginRight="100dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
         />
 
 
     <ImageView
         android:id="@+id/sem8"
-        android:layout_width="match_parent"
+        android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/sem4"
-        android:layout_below="@+id/sem7"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="190dp"
+        android:src="@drawable/sem5"
+        android:layout_below="@+id/sem5"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="20dp"
 
         />
-
-
 
 </RelativeLayout>

@@ -19,10 +19,10 @@ public class Semester_Activity extends AppCompatActivity {
         Semester1 = (ImageView) findViewById(R.id.sem1);
         Semester3 = (ImageView) findViewById(R.id.sem3);
         Semester4 = (ImageView) findViewById(R.id.sem4);
-        Semester5 = (ImageView) findViewById(R.id.sem1);
-        Semester6 = (ImageView) findViewById(R.id.sem1);
-        Semester7 = (ImageView) findViewById(R.id.sem1);
-        Semester8 = (ImageView) findViewById(R.id.sem1);
+        Semester5 = (ImageView) findViewById(R.id.sem5);
+        Semester6 = (ImageView) findViewById(R.id.sem6);
+        Semester7 = (ImageView) findViewById(R.id.sem7);
+        Semester8 = (ImageView) findViewById(R.id.sem8);
 
         Semester1.setOnClickListener(new View.OnClickListener() {
             @Override
