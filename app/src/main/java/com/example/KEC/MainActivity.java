@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         nextBtn = (Button) findViewById(R.id.nextButton);
         backBtn = (Button) findViewById(R.id.backButton);
-        homeBtn = (Button) findViewById(R.id.homeBtn);
+        homeBtn = (Button) findViewById(R.id.home_btn);
 
 
         sliderAdapter = new SliderAdapter(this);

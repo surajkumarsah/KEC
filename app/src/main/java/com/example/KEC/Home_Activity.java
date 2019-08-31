@@ -24,7 +24,8 @@ public class Home_Activity extends AppCompatActivity {
         studentLogin = (ImageView) findViewById(R.id.student_Login);
         adminLogin = (ImageView) findViewById(R.id.admin_Login);
         facultyLogin = (ImageView) findViewById(R.id.faculty_Login);
-
+        SemBtn = (Button) findViewById(R.id.button);
+        AdminPage = (Button) findViewById(R.id.admin_page);
 
 
 

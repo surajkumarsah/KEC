@@ -14,7 +14,6 @@
             android:label="@string/title_activity_profile_"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".Add_Admin_Activity" />
-        <activity android:name=".Add_Admin" />
         <activity android:name=".Upload_Notice_Activity" />
         <activity android:name=".Semester_Mech_Activity" />
         <activity android:name=".Semester_Civil_Activity" />
