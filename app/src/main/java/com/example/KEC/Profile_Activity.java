@@ -26,12 +26,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.Button;
 import android.widget.TextView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import io.paperdb.Paper;
 
 public class Profile_Activity extends AppCompatActivity {
+
+    Button ch;
 
     private AppBarConfiguration mAppBarConfiguration;
 

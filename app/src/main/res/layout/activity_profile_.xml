@@ -17,7 +17,10 @@
         app:headerLayout="@layout/nav_header_profile_"
         app:menu="@menu/activity_profile__drawer" />
 
-    <include
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+/>    <include
         layout="@layout/app_bar_profile_"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private Button backBtn;
     private int mCurrentPage;
     private Button homeBtn;
+    private Button chool;
 
 
     @Override
